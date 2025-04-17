@@ -169,3 +169,75 @@ picture {
     margin-top: 10px;
     display: none;
 }
+
+
+
+/* CSS for screens below or equal to 600px wide - mobiles in mind */
+@media (max-width: 600px) {
+
+    
+.card {
+
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .search input {
+        padding: 10px 15px;
+        height: 40px;
+        margin-right: 16px;
+        font-size: 12px;
+    }
+    
+    .search button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .search button img {
+        width: 12px;
+    }
+    
+    
+    .weather-icon {
+        width: 100px;
+        margin-top: 30px;
+    }
+    
+    .weather h1 {
+        font-size: 60px;
+        font-weight: 500;
+    
+    }
+    
+    .weather h2 {
+        font-size: 35px;
+        font-weight: 400;
+        margin-top: -10px;
+    
+    }
+    
+    .details {
+        flex-direction: column;
+        gap: 40px;
+
+    }
+    
+    
+    .col img {
+        width: 40px;
+        margin-right: 16px;
+    }
+    
+    .humidity, .wind {
+        font-size: 20px;
+        margin-top: -6px;
+    
+    }
+    
+
+
+
+
+
+}
