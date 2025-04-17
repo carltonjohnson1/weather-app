@@ -22,6 +22,7 @@ async function checkWeather(city) {
     
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src = "images/clouds.png";
+           
         }
         
         else if(data.weather[0].main == "Clear"){
@@ -45,11 +46,13 @@ async function checkWeather(city) {
     
     
     }
-
-
-
    
 }
+
+searchBox.addEventListener("keypress", (e) => {
+    if(e.key == "Enter") searchBtn.click();
+
+})
 
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value);
