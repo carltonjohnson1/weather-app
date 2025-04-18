@@ -34,7 +34,7 @@ picture {
     display: block;
 } */
 
-.card {
+#card {
     width: 90%;
     max-width: 470px;
     margin: 100px auto 0;
@@ -176,7 +176,7 @@ picture {
 @media (max-width: 600px) {
 
     
-.card {
+#card {
 
     padding: 40px 20px;
     text-align: center;
