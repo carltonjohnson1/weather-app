@@ -1,3 +1,5 @@
+import { config } from '../config.js';
+
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 // DOM Elements
