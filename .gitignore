@@ -1,6 +1,5 @@
 # Environment variables and secrets
 .env
-config.js
 
 # IDE and editor files
 .vscode/
