@@ -1,3 +1,14 @@
+/*
+
+Neutral	#8EC5FC → #E0C3FC	white (text colour)	
+Clouds	#d7d2cc → #304352	White (text colour) 
+Clear 	#ffe259 → #ffa751	Black (text colour)	
+Rain	#2c3e50 → #4ca1af	White (text colour)	
+Drizzle	#a1c4fd → #c2e9fb	Black (text colour)	
+Mist	#606c88 → #3f4c6b	White (text colour)	
+Snow	#e0eafc → #cfdef3	Black (text colour)	
+
+*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,8 +17,12 @@
 
 body {
     font-size: 100%;
+    font-family: "Poppins", sans-serif;
+    background: #222;
+
 }
 
+/* 
 img {
     display: block;
     max-width: 100%;
@@ -16,4 +31,332 @@ img {
 
 picture {
     display: block;
+} */
+
+#card {
+    width: 90%;
+    max-width: 470px;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.card-background-base {
+    background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+    color: #fff;
+}
+
+.card-background-clouds {
+    background: linear-gradient(135deg, #d7d2cc, #304352);
+    color: #fff;
+}
+
+.card-background-clear {
+    background: linear-gradient(135deg, #ffe259, #ffa751);
+    color: #000;
+}
+
+.card-background-rain {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    color: #fff;
+}
+
+.card-background-drizzle {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    color: #000;
+}
+
+.card-background-mist {
+    background: linear-gradient(135deg, #606c88, #3f4c6b);
+    color: #fff;
+}
+
+.card-background-snow {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    color: #000;
+}
+
+
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+
+}
+
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+
+}
+
+.weather {
+    display: none;
+}
+
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+
+
+/* CSS for screens below or equal to 600px wide - mobiles in mind */
+@media (max-width: 600px) {
+
+    
+#card {
+
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .search input {
+        padding: 10px 15px;
+        height: 40px;
+        margin-right: 16px;
+        font-size: 12px;
+    }
+    
+    .search button {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .search button img {
+        width: 12px;
+    }
+    
+    
+    .weather-icon {
+        width: 100px;
+        margin-top: 30px;
+    }
+    
+    .weather h1 {
+        font-size: 60px;
+        font-weight: 500;
+    
+    }
+    
+    .weather h2 {
+        font-size: 35px;
+        font-weight: 400;
+        margin-top: -10px;
+    
+    }
+    
+    .details {
+        flex-direction: column;
+        gap: 40px;
+
+    }
+    
+    
+    .col img {
+        width: 40px;
+        margin-right: 16px;
+    }
+    
+    .humidity, .wind {
+        font-size: 20px;
+        margin-top: -6px;
+    
+    }
+    
+
+
+
+
+
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Weather Transitions */
+.weather {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.weather.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Weather Description and Feels Like */
+.weather-description {
+    font-size: 24px;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+.feels-like {
+    font-size: 20px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Error Message Styling */
+.error {
+    background-color: #ffffff;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    color: #000000;
+    animation: shake 0.5s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Focus States for Accessibility */
+.search input:focus,
+.search button:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .card-background-base,
+    .card-background-clouds,
+    .card-background-clear,
+    .card-background-rain,
+    .card-background-drizzle,
+    .card-background-mist,
+    .card-background-snow {
+        border: 2px solid #000;
+    }
+
+    .search input,
+    .search button {
+        border: 2px solid #000;
+    }
+
+    .error {
+        background-color: #ffffff;
+        border: 3px solid #000000;
+        color: #000000;
+    }
+
+    .search input:focus,
+    .search button:focus {
+        outline: 3px solid #000000;
+        outline-offset: 2px;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation: none;
+    }
+
+    .weather {
+        transition: none;
+    }
+
+    .error {
+        animation: none;
+    }
 }
