@@ -1,4 +1,4 @@
-import { config } from '../config.js';
+import { config } from '/weather-app/config.js';
 
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
@@ -14,32 +14,32 @@ const errorElement = document.querySelector(".error");
 // Add weather condition mapping
 const weatherConditions = {
     Clouds: {
-        icon: "./images/Clouds_02d@2x.png",
+        icon: "/weather-app/images/Clouds_02d@2x.png",
         backgroundClass: "card-background-clouds",
         textColor: "#fff"
     },
     Clear: {
-        icon: "./images/Clear_01d@2x.png",
+        icon: "/weather-app/images/Clear_01d@2x.png",
         backgroundClass: "card-background-clear",
         textColor: "#000"
     },
     Rain: {
-        icon: "./images/rain_09d@2x.png",
+        icon: "/weather-app/images/rain_09d@2x.png",
         backgroundClass: "card-background-rain",
         textColor: "#fff"
     },
     Drizzle: {
-        icon: "./images/drizzle_10d@2x.png",
+        icon: "/weather-app/images/drizzle_10d@2x.png",
         backgroundClass: "card-background-drizzle",
         textColor: "#000"
     },
     Mist: {
-        icon: "./images/mist_50d@2x.png",
+        icon: "/weather-app/images/mist_50d@2x.png",
         backgroundClass: "card-background-mist",
         textColor: "#fff"
     },
     Snow: {
-        icon: "./images/snow_13d@2x.png",
+        icon: "/weather-app/images/snow_13d@2x.png",
         backgroundClass: "card-background-snow",
         textColor: "#000"
     }

@@ -23,7 +23,7 @@
           aria-describedby="error-message"
         />
         <button aria-label="Search weather">
-          <img src="./images/search.png" alt="Search icon" />
+          <img src="/weather-app/images/search.png" alt="Search icon" />
         </button>
       </div>
       
@@ -39,21 +39,21 @@
       </div>
 
       <div class="weather" aria-live="polite">
-        <img src="./images/Clear_01d@2x.png" class="weather-icon" alt="Weather condition icon" />
+        <img src="/weather-app/images/Clear_01d@2x.png" class="weather-icon" alt="Weather condition icon" />
         <h1 class="temp">22°c</h1>
         <h2 class="city">London</h2>
         <p class="weather-description">Weather description</p>
         <p class="feels-like">Feels like: 20°c</p>
         <div class="details">
           <div class="col">
-            <img src="./images/humidity.png" alt="Humidity icon" />
+            <img src="/weather-app/images/humidity.png" alt="Humidity icon" />
             <div>
               <p class="humidity">50%</p>
               <p>Humidity</p>
             </div>
           </div>
           <div class="col">
-            <img src="./images/wind.png" alt="Wind speed icon" />
+            <img src="/weather-app/images/wind.png" alt="Wind speed icon" />
             <div>
               <p class="wind">15 km/h</p>
               <p>Wind Speed</p>
@@ -63,9 +63,9 @@
       </div>
     </div>
 
-    <!-- Make sure config.js is loaded before main.js -->
-    <script type="module" src="./config.js"></script>
-    <script type="module" src="./scripts/main.js"></script>
+    <!-- Update script paths to be absolute from repository root -->
+    <script type="module" src="/weather-app/config.js"></script>
+    <script type="module" src="/weather-app/scripts/main.js"></script>
   </body>
 </html>
 
